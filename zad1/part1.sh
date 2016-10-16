@@ -4,10 +4,12 @@ function create_user {
 	class=$2
 	id -u $username &> /dev/null || useradd $username -d /home/$username -m
 	usermod -a -G $class $username
+	home=/home/$username
 	public=/home/$username/public
 	mkdir -p $public
 	chown $username $public
 	chgrp $class $public
+	chmod 0700 $home
 	setfacl -m u:master:rwx $public
 	setfacl -d -m u:master:rwx $public
 	setfacl -m g:staff:rx $public
