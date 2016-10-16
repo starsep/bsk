@@ -29,12 +29,12 @@ function create_class {
 	done
 }
 
-create_class klasa1e $class1
-create_class klasa2e $class2
-create_class klasa3e $class3
-
 # create group staff if doesn't exist
 groupadd -f staff
 
 # create user master if doesn't exist
 id -u master &> /dev/null || useradd master
+
+create_class klasa1e $class1
+create_class klasa2e $class2
+create_class klasa3e $class3
