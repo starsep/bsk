@@ -1,8 +1,4 @@
 #!/bin/bash
-class1=`seq 424201 424215`
-class2=`seq 424401 424415`
-class3=`seq 424601 424615`
-
 function create_user {
 	username=$1
 	class=$2
@@ -29,12 +25,12 @@ function create_class {
 	done
 }
 
-# create group staff if doesn't exist
+# create group staff if it doesn't exist
 groupadd -f staff
 
-# create user master if doesn't exist
+# create user master if it doesn't exist
 id -u master &> /dev/null || useradd master
 
-create_class klasa1e $class1
-create_class klasa2e $class2
-create_class klasa3e $class3
+create_class klasa1e `seq 424201 424215`
+create_class klasa2e `seq 424401 424415`
+create_class klasa3e `seq 424601 424615`
