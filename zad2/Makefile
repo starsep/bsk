@@ -12,9 +12,9 @@ program: program.c $(OFILES)
 	$(COMPILER) -c $< $(CFLAGS)
 
 clean:
-	rm -f program *.o
+	rm -f program *.o fc359081.tar.gz
 
 pack: clean fc359081.tar.gz
 
-fc359081.tar.gz: program.c text.c text.h
-	tar -czvf $@ $^
+fc359081.tar.gz:
+	tar -czvf fc359081.tar.gz *
