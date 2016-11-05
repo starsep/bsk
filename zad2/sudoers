@@ -1,1 +1,1 @@
-user2 ALL=NOPASSWD: /usr/bin/apt-get
+user2 ALL= /usr/bin/apt-get
