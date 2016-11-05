@@ -3,7 +3,7 @@
 #include "pam.h"
 
 int main(void) {
-  if (authorize() == AUTHORIZED_CORRECTLY) {
+  if (authorize()) {
     parse();
     return 0;
   }

@@ -1,4 +1,4 @@
-CFLAGS=-Wall -Wextra -Wshadow -O2 -pedantic
+CFLAGS=-Wall -Wextra -Wshadow -O2 -pedantic -g
 COMPILER=gcc
 LIBRARIES=-lpam -lpam_misc
 OFILES=parser.o pam.o

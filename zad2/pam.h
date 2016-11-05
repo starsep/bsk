@@ -1,8 +1,8 @@
 #ifndef PAM_H
 #define PAM_H
 
-#define AUTHORIZED_CORRECTLY 0
+#include <stdbool.h>
 
-int authorize(void);
+bool authorize(void);
 
 #endif // PAM_H
