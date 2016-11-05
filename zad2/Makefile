@@ -1,7 +1,7 @@
 CFLAGS=-Wall -Wextra -Wshadow -O2 -pedantic
 COMPILER=gcc
 LIBRARIES=-lpam -lpam_misc
-OFILES=parser.o
+OFILES=parser.o pam.o
 
 all: program
 
