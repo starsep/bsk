@@ -16,6 +16,7 @@ bool authorize(void) {
     exit(1);
   }
 
+  pam_set_item(pamh, PAM_USER_PROMPT, "Badania korpusowe? ");
   retval = pam_authenticate(pamh, 0);
   result = retval == PAM_SUCCESS;
   pam_end(pamh, retval);

@@ -177,18 +177,17 @@ static bool processLine(Line *currentLine, WordsContainer *wordsContainer) {
 	int len = strlen(currentLine->l);
 	int begin = 0;
 	for (int i = 0; i < len; i++) {
+			if (currentLine->l[i] == '.') {
+				end = true;
+			}
 			if (wordDelim(currentLine->l[i])) {
 				begin = i + 1;
 				continue;
 			}
 			if (wordDelim(currentLine->l[i + 1])) {
-				char c = currentLine->l[i + 1];
 				currentLine->l[i + 1] = '\0';
 				wordFromCString(&currentLine->l[begin], &word);
 				updateWord(&word, wordsContainer);
-				if (c == '.') {
-					end = true;
-				}
 			}
 	}
 	return end;
