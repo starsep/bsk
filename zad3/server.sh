@@ -1,4 +1,5 @@
 #!/bin/bash
+# Filip Czaplicki
 function blue_echo {
   echo -e "\e[1;34m$1\e[0m"
 }
@@ -38,3 +39,14 @@ su guest -c "cat sshconfig >> /home/guest/.ssh/config"
 
 # Skonfiguruj serwer SSH:
 cp sshd_config /etc/ssh/sshd_config
+service ssh restart
+
+#  Ustaw w ten sposób montowanie, żebyś mógł obejrzeć w przeglądarce
+# odpalonej na komputerze w labie BSK dowolny plik z katalogu
+# /home/students/inf/PUBLIC/BSK/Obrazy z maszyny students
+# (oczywiście tylko taki, do którego masz uprawnienia).
+su guest -c "mkdir -p /home/guest/Obrazy && sshfs students:/home/students/inf/PUBLIC/BSK/Obrazy /home/guest/Obrazy"
+# Używając programu rsync skopiuj (jako guest) ze
+# students katalog /home/students/inf/PUBLIC/BSK.
+# z = compress file data
+su guest -c "rsync -avzhe ssh students:/home/students/inf/PUBLIC/BSK ."

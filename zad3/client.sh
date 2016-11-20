@@ -1,4 +1,5 @@
 #!/bin/bash
+# Filip Czaplicki fc359081
 function blue_echo {
   echo -e "\e[1;34m$1\e[0m"
 }
