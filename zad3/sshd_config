@@ -48,8 +48,12 @@ PermitEmptyPasswords no
 # some PAM modules and threads)
 ChallengeResponseAuthentication no
 
-# Change to no to disable tunnelled clear text passwords
-#PasswordAuthentication yes
+# ------------ Zezwól U na zdalne logowanie jedynie przy -----------------------
+# ------------ pomocy klucza, a guest także przy pomocy hasła. -----------------
+PasswordAuthentication no
+
+Match User guest
+PasswordAuthentication yes
 
 # Kerberos options
 #KerberosAuthentication no
