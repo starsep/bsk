@@ -35,3 +35,6 @@ rm /home/guest/.ssh/client.pub
 # Skonfiguruj klienta ssh tak, aby Twój login na students był używany
 # jako domyślna nazwa użytkownika, gdy guest łączy się ze students
 su guest -c "cat sshconfig >> /home/guest/.ssh/config"
+
+# Skonfiguruj serwer SSH:
+cp sshd_config /etc/ssh/sshd_config
