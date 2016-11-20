@@ -1,0 +1,4 @@
+Host students
+ HostName students.mimuw.edu.pl
+ User fc359081
+ IdentityFile /home/fcbsk/.ssh/id_rsa
