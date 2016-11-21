@@ -6,6 +6,7 @@ Port 22
 # Use these options to restrict which interfaces/protocols sshd will bind to
 #ListenAddress ::
 #ListenAddress 0.0.0.0
+# ----------------------------Ogranicz wersję protokołu do 2.-------------------
 Protocol 2
 # HostKeys for protocol version 2
 HostKey /etc/ssh/ssh_host_rsa_key
@@ -25,7 +26,8 @@ LogLevel INFO
 
 # Authentication:
 LoginGraceTime 120
-PermitRootLogin without-password
+# ----------------Zabroń zdalnego logowania przez roota.------------------------
+PermitRootLogin no
 StrictModes yes
 
 RSAAuthentication yes
