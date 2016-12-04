@@ -15,3 +15,64 @@ Model atakującego:
   z kont itp.)
 
 Zdobycie dostępu do skrzynki studenta
+1. (AND) Wysłanie do studenta maila o nowym uniwersyteckim webowym kliencie
+  pocztowym.
+  1.1 (AND) Założenie strony będącej webowym klientem webowym.
+    1.1.1 (OR) Napisanie kodu strony.
+      1.1.1.1 (OR) Użycie gotowego rozwiązania + edycji kodu, tak aby hasła były
+        gdzieś zapisywane.
+      1.1.1.1 (OR) Implementacja protokołu POP3 od zera na własną rękę.
+    1.1.2 (OR) Zakup domeny o podobnej nazwie do uniwersyteckiej.
+  1.2 (OR) Wysłanie maila.
+    1.2.1 (AND) Wysłanie z maila o podobnym adresie jak administrator.
+      1.2.1.1 (OR) Zakup domeny o podobnej nazwie do uniwersyteckiej.
+      1.2.1.2 (OR) Założenie serwera pocztowego, konta itp.
+      1.2.1.3 (OR) Wysłanie fałszywej wiadomości do studentów.
+    1.2.2 (AND) Wysłanie maila z adresu administratora, profesora lub innej
+      zaufanej osoby.
+      1.2.2.1 (OR) Zdobycie dostępu do konta.
+        1.2.2.1.1 (OR) Zdobycie hasła zaufanej osoby.
+          1.2.2.1.1.1 (OR) Poprzez podsłuchanie komunikatów
+            siecowych np. wireshark, bo brak kryptografii.
+          1.2.2.1.1.2 (OR) Poprzez zaproszenie tej osoby do korzystania
+            z naszego phishingowego serwisu.
+        1.2.2.1.2 (OR) Zaufana osoba pozostawiła zalogowane konto w miejscu
+          publicznym np. laboratoriach.
+      1.2.2.2 (OR) Wysłanie fałszywej wiadomości do studentów.
+    1.2.3 (AND) Podszycie się pod zaufane konto pocztowe (np. administratora).
+      1.2.3.1 (OR) Użycie techniki pozwalącej wpisywać dowolny adres nadawcy
+        w mailu.
+      1.2.3.2 (OR) Wysłanie fałszywej wiadomości do studentów.
+  1.3 (AND) Student loguje się na naszej stronie.
+    1.3.1 (OR) Student wchodzi na naszą stronę.
+    1.3.2 (OR) Student wpisuje login i hasło.
+    1.3.3 (OR) Zapisujemy login i hasło.
+      1.3.3.1 (OR) W bazie danych.
+      1.3.3.2 (OR) W pliku tekstowym.
+      1.3.3.3 (OR) Wysyłamy na jakiekoś maila.
+    1.3.4 (OR) Aby nie wzbudzać podejrzeń klientowi pokazujemy jego maile,
+        umożliwiamy wykonywanie operacji pocztowych itp.
+      1.3.4.1 (OR) Możemy wysłać do losowego podzbioru kontaktów maila
+        zachwalającego możliwości naszego serwisu (ale raczej dopiero
+        po zdobyciu pewnej bazy "użytkowników").
+2. (AND) Wysłanie maila zawiadamiającego o ataku na bazę danych z hasłami.
+  2.1 (OR) Założenie strony wyglądającej jak uniwersytecka, umożliwiającej
+    zmianę hasła na nowe, "bezpieczne".
+  2.2 (OR) Wysłanie maila z zaufanego maila (jak w 1.2)
+    z linkiem do naszej strony.
+  2.3 (AND) Student "zmienia" hasło.
+    2.3.1 (OR) Wchodzi na stronę.
+    2.3.2 (OR) Wpisuje stare oraz "nowe" hasło.
+    2.3.3 (OR) Zapisujemy hasła (jak w 1.3.3).
+    2.3.4 (OR) Wysyłamy maila potwierdzającego zmianę hasła.
+3. (AND) Przechwytujemy hasło nasłuchując sieć uniwersytecką np. wiresharkiem.
+4. (AND) Zdobywamy hasło poprzez zainstalowanie keyloggera na
+  komputerach uniwersyteckich (np. w labach).
+  4.1 (OR) Zdobywamy dostęp do komputerów.
+    4.1.1 (OR) Fizyczny.
+    4.1.2 (OR) Zdalny np. ssh.
+  4.2 (OR) Instalujemy keyloggera.
+  4.3 (OR) Wszystkie znaki na klawiaturze wysyłamy na swój serwer/maila.
+  4.4 (OR) Wyszukujemy znane ciągi znaków.
+    4.4.1 (OR) Wpisywanie domeny z logowaniem do poczty.
+    4.4.2 (OR) Loginy studentów jeżeli mają dosyć stałą postać.
