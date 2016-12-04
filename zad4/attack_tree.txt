@@ -1,0 +1,17 @@
+Chronione wartości:
+- hasło studenta: umożliwia dostęp do innych usług uniwersyteckich, ze względu
+  na użycie centralnego systemu uwierzytelniania, potencjalnie także do usług
+  zewnętrznych (jeżeli student używa tego samego hasła w innych miejscach)
+- prywatność korespondencji (w mailach mogą być tajne lub niewygodne informacje)
+- dostęp do skrzynki pocztowej (jako administratorzy poczty chcemy, aby nasi
+  użytkownicy mieli dostęp do poczty przez cały czas)
+
+Model atakującego:
+- ma zdolności techniczne, programistyczne oraz wiedzę o systemie używanym na
+  uniwersytecie
+- może założyć domenę podobną do uniwersyteckiej (w celach phishingowych)
+- może założyć zewnętrzny serwer WWW lub pocztowy
+- ma dostęp do infrastruktury uniwersyteckiej (znajomy?, włamanie do któregoś
+  z kont itp.)
+
+Zdobycie dostępu do skrzynki studenta
