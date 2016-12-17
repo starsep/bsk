@@ -10,7 +10,7 @@ ST=Mazowieckie
 L=Warsaw
 O=MIMUW
 OU=BSK
-CN="bsklab$LAB_ID.mimuw.edu.pl"
+CN="bsklab$LAB_ID.mimuw.edu.pl" #CN="localhost"
 mail="bsk@mimuw.edu.pl"
 REQ_DATA="/C=$C/ST=$ST/L=$L/O=$O/OU=$OU/CN=$CN/emailAddress=$mail"
 $REQ -new $DAYS -passout pass:$password \
