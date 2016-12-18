@@ -1,4 +1,5 @@
 #!/bin/bash
+# autor: Filip Czaplicki fc359081
 LAB_ID=$(echo -n "$(hostname)" | tail -c 2)
 password=tajnehaslo
 if [ -z "$OPENSSL" ]; then OPENSSL=openssl; fi

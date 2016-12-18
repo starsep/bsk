@@ -1,4 +1,5 @@
 #!/bin/bash
+# autor: Filip Czaplicki fc359081
 password=tajnehaslo
 if [ -z "$OPENSSL" ]; then OPENSSL=openssl; fi
 CADAYS="-days 3652"
