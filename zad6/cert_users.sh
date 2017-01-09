@@ -4,5 +4,5 @@ PATTERN="s|(.*)[  ](.*)[  ](.*)"
 while read -r line; do
     name=`echo $line | perl -pe "$PATTERN|\1 \2|"`
     email=`echo $line | perl -pe "$PATTERN|\3|"`
-    ./create_ca.sh "$name" $email 
+    ./cert.sh "$name" $email
 done < users
