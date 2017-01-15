@@ -42,7 +42,7 @@ fi
 # This variable should point to the top level of the easy-rsa tree. By default,
 # this is taken to be the directory you are currently in.
 
-#set_var EASYRSA	"$PWD"
+#set_var EASYRSA       "$PWD"
 
 # If your OpenSSL command is not in the system PATH, you will need to define the
 # path to it here. Normally this means a full path to the executable, otherwise
@@ -86,7 +86,7 @@ set_var EASYRSA_REQ_PROVINCE	"Mazowieckie"
 set_var EASYRSA_REQ_CITY	"Warsaw"
 set_var EASYRSA_REQ_ORG	"BSK"
 set_var EASYRSA_REQ_EMAIL	"ca@mimuw.edu.pl"
-set_var EASYRSA_REQ_OU		"BSK Certification Authority 16"
+set_var EASYRSA_REQ_OU		"mimuw-bsk-lab"
 
 # Choose a size in bits for your keypairs. The recommended value is 2048.  Using
 # 2048-bit keys is considered more than sufficient for many years into the
