@@ -1,3 +1,5 @@
 *.pem
 demoCA
+client.key
+client.crt
 pki
